@@ -58,6 +58,9 @@
       h += `<p class="meta-line">${esc(s.original || "")}${s.year ? " · " + s.year + "년" : ""}${s.authorInfo ? " · " + esc(s.author) + " (" + esc(s.authorInfo) + ")" : ""}</p>`;
     }
     h += `<p>${esc(s.about)}</p>`;
+    if (s.type !== "canceled" && AUTHORS[s.author]) {
+      h += `<h4>작가 소개 · ${esc(s.author)}</h4><p class="author-bio">${esc(AUTHORS[s.author])}</p>`;
+    }
     if (s.attended) {
       h += `<h4>${esc(s.attendLabel || "참석")} · ${s.attended.length}명</h4>${chips(s.attended, "in")}`;
       if (s.attendNote) h += `<p class="meta-line" style="margin-top:6px">${esc(s.attendNote)}</p>`;

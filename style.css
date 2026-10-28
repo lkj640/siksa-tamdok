@@ -225,3 +225,4 @@ blockquote cite { display: block; font-family: var(--sans); font-style: normal; 
   .event { grid-template-columns: 1fr; }
   .event img { height: 200px; }
 }
+.author-bio { background: var(--paper); border-radius: 10px; padding: 10px 14px; font-size: .95rem; color: var(--ink-2); }
